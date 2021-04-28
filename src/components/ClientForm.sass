@@ -1,0 +1,393 @@
+// font-family: 'Open Sans', sans-serif
+// font-family: 'PT Sans', sans-serif
+$mobile: 810px
+
+.form-container 
+  width: 800px
+  height: 600px
+  margin: 0 auto
+  padding: 60px 67.5px
+  @media screen and (max-width: $mobile)
+    height: min-content
+    width: 100%
+    padding: 10px 10px
+
+.hidden
+  display: none
+
+.card 
+  position: relative
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: row
+
+  @media screen and (max-width: $mobile)
+    height: min-content
+    flex-direction: column
+  
+.bitmap 
+  width: 20%
+  height: 100%
+  background-color: #5A61ED
+  color: #fff
+
+  @media screen and (max-width: $mobile)
+    width: 100%
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0
+
+  h1.page-header 
+    position: absolute
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 49px
+    line-height: 1
+    letter-spacing: 0.5px
+    color: #FFFFFF
+    transform: rotate(-90deg) translateX(-10%)
+    transform-origin: left top
+    bottom: 20px
+    left: 10%
+    margin-bottom: 0
+
+    @media screen and (max-width: $mobile)
+      transform: rotate(0deg) translateX(0%)
+      bottom: 0
+      font-size: 32px
+      position: relative
+      left: 0
+    
+.form-wrapper 
+  width: 80%
+  border: 1px solid #d2d2d2
+  padding: 38px 20px
+  overflow: hidden
+  position: relative
+
+  @media screen and (max-width: $mobile)
+    width: 94%
+    padding: 19px 10px
+  
+  h2.form-header 
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 22px
+    line-height: 26px
+    letter-spacing: -0.46px
+    color: #111111
+    margin-bottom: 0
+    text-overflow: ellipsis
+  
+  h2.form-header.form-header-sended 
+    margin-top: 179px !important
+    margin-left: 44px !important
+  
+  h4.form-description.form-description-sended 
+    margin-top: 11px !important
+    margin-left: 44px !important
+    @media screen and (max-width: $mobile)
+      margin-bottom: 50%
+    
+  h4.form-description 
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 16px
+    color: #111111
+    margin-bottom: 0
+    text-overflow: ellipsis
+    &-created
+      margin-top: 20px
+    @media screen and ( max-width: $mobile )
+      margin-bottom: 16px
+.form-signup
+
+.tab
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  
+  @media screen and (max-width: $mobile)
+    margin-bottom: 60px
+
+
+.input-container
+  width: 50%
+  position: relative
+  @media screen and (max-width: $mobile)
+    width: 100%
+
+.input-error
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+  color: red
+  font-size: 12px
+  position: absolute
+  bottom: 0
+
+.input-wrapper 
+  width: 100%
+  // height: 42px
+  display: flex
+  flex-direction: column
+  margin: 5px 0 20px 0
+
+  label 
+    width: 100%
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+    color: #7C7C7C
+    margin-bottom: 0px
+  
+  input 
+    width: 200px
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    color: #111111
+    line-height: 28px
+    border: none
+    border-radius: 0
+    outline: none
+    padding: 0
+    box-shadow: none
+    box-sizing: content-box
+    height: 28px
+    background-color: transparent
+    @media screen and (max-width: $mobile)
+      width: 100%
+  
+  input:focus 
+    border-bottom: 1px solid #5A61ED
+    transition: 0.5s
+   
+  input.changed:valid 
+    background: url("../assets/img/valid.svg")
+    background-position-x: 0%
+    background-position-y: 0%
+    background-repeat: repeat
+    background-position: right center
+    background-repeat: no-repeat
+  
+  select 
+    width: 200px
+    height: 28px
+    appearance: none
+    border: 0
+    outline: none
+    background-color: transparent
+    background: url("../assets/img/dropdown-arrow.svg")
+    background-position: right center
+    background-repeat: no-repeat
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+  
+  .select-multiple
+    width: 200px
+    height: 64px
+    overflow: hidden
+    background: transparent
+
+    option
+      height: 20px
+      font-size: 14px
+      line-height: 20px
+      &:nth-child(1)
+        margin-top: 4px
+      &:checked
+        background-image: url("../assets/img/valid.svg")
+        background-position-x: 0%
+        background-position-y: 0%
+        background-repeat: repeat
+        background-position: right center
+        background-repeat: no-repeat
+
+  .custom-checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  .custom-checkbox+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &::before
+      content: ''
+      display: inline-block
+      width: 1.5em
+      height: 1.5em
+      flex-shrink: 0
+      flex-grow: 0
+      border: 1px solid #adb5bd
+      border-radius: 0.5em
+      margin-right: 0.5em
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 50% 50%
+
+  .custom-checkbox:checked+label
+    &::before
+      border-color: #0b76ef
+      background-color: #0b76ef
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+  .custom-checkbox:not(:disabled):not(:checked)+label:hover
+    &::before
+      border-color: #b3d7ff
+  .custom-checkbox:not(:disabled):active+label
+    &::before
+      background-color: #b3d7ff
+      border-color: #b3d7ff
+  .custom-checkbox:focus+label
+    &::before
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+  .custom-checkbox:focus:not(:checked)+label
+    &::before
+      border-color: #80bdff
+  .custom-checkbox:disabled+label::before
+    &::before
+      background-color: #e9ecef
+  .gender-input-container
+    display: flex
+    .gender-item-wrapper 
+      label.radio-label 
+        font-family: 'Open Sans', sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+        color: #111111
+      
+    .gender-item-wrapper:nth-child(2) 
+      margin-left: 15px
+    
+    .gender-input 
+      display: none
+
+    .gender-radio 
+      display: inline-block
+      border: 0.7px solid #5A61ED
+      width: 12px
+      height: 12px
+      position: relative
+      vertical-align: middle
+      box-sizing: border-box
+      margin-right: 6px
+      border-radius: 300px
+      background-color:#ffffff
+
+      &::before 
+        content: ''
+        background: #5A61ED
+        width: 6px
+        height: 6px
+        opacity: 0
+        transition: 0.3s
+        position: absolute
+        top: 50%
+        left: 50%
+        border-radius: 300px
+        transform: translateX(-50%) translateY(-50%)
+      
+    .gender-input:checked + .gender-radio:before 
+        opacity: 1
+
+.input-wrapper--error
+  input
+    border-bottom: 1px solid red !important
+  select
+    border-bottom: 1px solid red !important
+
+.date-of-birth 
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  #date_of_birth 
+    width: 56px
+  
+  #month_of_birth 
+    width: 91px
+  
+  #year_of_birth 
+    width: 67px
+  
+.gender 
+  display: flex
+  flex-direction: row !important
+  flex-wrap: wrap
+
+.radio-label 
+  font-family: 'Open Sans', sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 16px
+
+.person-svg-wrapper 
+//  background: url("../img/svg/person.svg")
+  position: absolute
+  width: 411px
+  height: 411px
+  bottom: -56px
+  right: -104px
+  z-index: -10
+  
+.btn-submit-wrapper 
+  position: absolute
+  right: 20px
+  bottom: 32px
+  width: 100%
+  display: flex
+  align-items: flex-end
+  flex-direction: row-reverse
+
+  @media screen and (max-width: $mobile)
+    // margin-top: 8px
+  
+  @media (max-width: 342px) 
+    // align-items: center
+  
+  .btn-submit
+    width: 154px
+    height: 32px
+    background: #5A61ED
+    border: 0.5px solid #FFFFFF
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 18px
+    color: #FFFFFF
+    align-self: flex-end
+    margin: 0 4px
+
+    &:disabled
+      background-color: #b7bafc
+    @media screen and (max-width: $mobile)
+      width: 120px
+    
+.delay-6s
+  animation-delay: 6s
+
+.delay-7s
+  animation-delay: 7s
+
+.delay-8s
+  animation-delay: 8s
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap')
